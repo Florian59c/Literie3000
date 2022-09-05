@@ -35,6 +35,7 @@ if (!empty($_POST)) {
 }
 ?>
 
+<div class="container">
     <form action="" method="post">
         <div>
             <label for="inputMarque">numéro de la marque</label>
@@ -61,9 +62,11 @@ if (!empty($_POST)) {
             <input type="text" id="inputReduc" name="reduc" value="<?= isset($reduc) ? $reduc : "" ?>">
         </div>
         </div>
-        <input type="submit" value="Ajout d'un matelas">
+        <div>
+        <input class="validation" type="submit" value="Ajout d'un matelas">
+        </div>
     </form>
-
+    </div>
 
 <?php
 include("templates/footer.php");

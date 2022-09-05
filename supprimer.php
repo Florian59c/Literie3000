@@ -11,9 +11,10 @@ include("templates/header.php");
 
 ?>
 
+<div class="container suppr">
 <h1>Le matelas à été supprimer</h1>
 <a href="index.php">Cliquez ici pour retourner à la page d'accueil</a>
-
+</div>
 <?php
 include("templates/footer.php");
 ?>

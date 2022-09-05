@@ -39,6 +39,7 @@ if (!empty($_POST)) {
 include("templates/header.php");
 ?>
 
+<div class="container">
 <form action="" method="post">
         <div>
             <label for="inputMarque">numéro de la marque</label>
@@ -65,9 +66,11 @@ include("templates/header.php");
             <input type="text" id="inputReduc" name="reduc" value="<?= isset($reduc) ? $reduc : "" ?>">
         </div>
         </div>
-        <input type="submit" value="modifier un matelas">
+        <div class="test">
+        <input class="validation" type="submit" value="modifier un matelas">
+        </div>
     </form>
-
+    </div>
 <?php
 include("templates/footer.php");
 ?>

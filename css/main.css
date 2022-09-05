@@ -12,10 +12,88 @@ body {
     font-size: 1.6rem;
     /* enlever les marge par defaut du navigateur */
     margin: 0;
+    /* background-color: #0C4085; */
 }
 
 header {
     text-align: center;
-    margin-bottom: 3rem;
 }
 
+.container {
+    padding: 3rem;
+    text-align: center;
+}
+
+.container img {
+    width: 100%;
+}
+
+.container a, .validation {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    border: 0.3rem solid #FFCD4C;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #2762b1;
+}
+
+.container a:hover, .validation:hover {
+    color: #FFCD4C;
+    border: 0.3rem solid #FFFFFF;
+    background-color: #3b80da;
+}
+
+.btn {
+    margin: 3rem 0;
+}
+
+.container h1, h2, h3, label {
+    color: #0C4085;
+    margin: 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3, label {
+    font-size: 2.5rem;
+}
+
+.validation:hover {
+    cursor: pointer;
+}
+
+
+
+/* page de suppression */
+.suppr a{
+    font-size: 2rem;
+}
+.suppr h1 {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+.lit {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.lit div {
+    width: 100%;
+    margin: 0 2rem;
+}
+
+.btn-add {
+    margin-bottom: 6rem;
+}
+}

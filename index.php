@@ -16,12 +16,13 @@ include("templates/header.php");
 
 ?>
 <div class="container">
-    <div>
+    <div class="btn btn-add">
         <a href="ajouter.php">Ajouter</a>
     </div>
     <?php
     foreach ($lits as $lit) {
     ?>
+    <div class="lit">
         <div>
             <img src="<?= $lit["image"] ?>" alt="<?= $lit["nom"] ?>">
         </div>
@@ -34,10 +35,11 @@ include("templates/header.php");
             <h3><?= $lit["prix"] ?></h3>
             <h3><?= $lit["prix_reduit"] ?></h3>
         </div>
-        <div>
+        <div class="btn">
             <a href="modifier.php?id=<?= $lit["id"] ?>">Modifier</a>
             <a href="supprimer.php?id=<?= $lit["id"] ?>">Supprimer</a>
         </div>
+    </div>
     <?php
     }
     ?>
