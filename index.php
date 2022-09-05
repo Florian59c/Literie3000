@@ -13,10 +13,12 @@ GROUP BY lit.id
 $lits = $query->fetchAll(PDO::FETCH_ASSOC);
 
 include("templates/header.php");
-include("templates/boutons.php");
 
 ?>
 <div class="container">
+    <div>
+        <a href="ajouter.php">Ajouter</a>
+    </div>
     <?php
     foreach ($lits as $lit) {
     ?>
@@ -32,9 +34,13 @@ include("templates/boutons.php");
             <h3><?= $lit["prix"] ?></h3>
             <h3><?= $lit["prix_reduit"] ?></h3>
         </div>
-<?php
+        <div>
+            <a href="modifier.php?id=<?= $lit["id"] ?>">Modifier</a>
+            <a href="supprimer.php?id=<?= $lit["id"] ?>">Supprimer</a>
+        </div>
+    <?php
     }
-?>
+    ?>
 </div>
 <?php
 include("templates/footer.php");

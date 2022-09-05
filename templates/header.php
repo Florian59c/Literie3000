@@ -10,5 +10,7 @@
 
 <body>
     <header>
-        <img src="./img/logo.png" alt="Logo Literie3000">
+        <a href="index.php">
+            <img src="./img/logo.png" alt="Logo Literie3000">
+        </a>
     </header>
