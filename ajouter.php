@@ -35,8 +35,6 @@ if (!empty($_POST)) {
 }
 ?>
 
-    <h1>creation d'un compte utilisateur</h1>
-
     <form action="" method="post">
         <div>
             <label for="inputMarque">numéro de la marque</label>
