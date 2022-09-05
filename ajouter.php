@@ -14,7 +14,7 @@ if (!empty($_POST)) {
 
     // Si pas d'erreurs, insertion du lit en bdd
     if (empty($errors)) {
-        
+
         $db = new PDO("mysql:host=localhost;dbname=literie3000", "root", "");
 
         //creation du lit
@@ -26,7 +26,7 @@ if (!empty($_POST)) {
         $query->bindParam(":img", $img);
         $query->bindParam(":prix", $prix);
         $query->bindParam(":reduc", $reduc);
-        
+
         if ($query->execute()) {
             //rediriger vers la page d'acceuil
             header("location: index.php");
@@ -61,12 +61,12 @@ if (!empty($_POST)) {
             <label for="inputReduc">prix avec reduction</label>
             <input type="text" id="inputReduc" name="reduc" value="<?= isset($reduc) ? $reduc : "" ?>">
         </div>
-        </div>
-        <div>
-        <input class="validation" type="submit" value="Ajout d'un matelas">
-        </div>
-    </form>
-    </div>
+</div>
+<div>
+    <input class="validation" type="submit" value="Ajout d'un matelas">
+</div>
+</form>
+</div>
 
 <?php
 include("templates/footer.php");

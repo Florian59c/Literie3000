@@ -13,19 +13,19 @@ if (!empty($_POST)) {
 
     // Si pas d'erreurs, modification du lit en bdd
     if (empty($errors)) {
-        
+
         $db = new PDO("mysql:host=localhost;dbname=literie3000", "root", "");
 
         //modification du lit
         $query = $db->prepare("UPDATE lit SET id_marque = :marque, id_taille = :taille, nom = :nom, image = :img, prix = :prix, prix_reduit = :reduc WHERE id = :id");
-        
+
         $query->bindParam(":marque", $marque);
         $query->bindParam(":taille", $taille);
         $query->bindParam(":nom", $nom);
         $query->bindParam(":img", $img);
         $query->bindParam(":prix", $prix);
         $query->bindParam(":reduc", $reduc);
-        
+
         if ($query->execute()) {
             //rediriger vers la page d'acceuil
             header("location: index.php");
@@ -40,7 +40,7 @@ include("templates/header.php");
 ?>
 
 <div class="container formulaire">
-<form action="" method="post">
+    <form action="" method="post">
         <div>
             <label for="inputMarque">numéro de la marque</label>
             <input type="text" id="inputMarque" name="marque" value="<?= isset($marque) ? $marque : "" ?>">
@@ -65,12 +65,12 @@ include("templates/header.php");
             <label for="inputReduc">prix avec reduction</label>
             <input type="text" id="inputReduc" name="reduc" value="<?= isset($reduc) ? $reduc : "" ?>">
         </div>
-        </div>
-        <div class="test">
-        <input class="validation" type="submit" value="modifier un matelas">
-        </div>
-    </form>
-    </div>
+</div>
+<div class="test">
+    <input class="validation" type="submit" value="modifier un matelas">
+</div>
+</form>
+</div>
 <?php
 include("templates/footer.php");
 ?>

@@ -28,7 +28,8 @@ header {
     width: 100%;
 }
 
-.container a, .validation {
+.container a,
+.validation {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 3rem;
@@ -39,7 +40,8 @@ header {
     background-color: #2762b1;
 }
 
-.container a:hover, .validation:hover {
+.container a:hover,
+.validation:hover {
     color: #FFCD4C;
     border: 0.3rem solid #FFFFFF;
     background-color: #3b80da;
@@ -49,7 +51,10 @@ header {
     margin: 3rem 0;
 }
 
-.container h1, h2, h3, label {
+.container h1,
+h2,
+h3,
+label {
     color: #0C4085;
     margin: 0;
 }
@@ -62,7 +67,8 @@ h2 {
     font-size: 4rem;
 }
 
-h3, label {
+h3,
+label {
     font-size: 2.5rem;
 }
 
@@ -81,37 +87,38 @@ input {
 
 
 /* page de suppression */
-.suppr a{
+.suppr a {
     font-size: 2rem;
 }
+
 .suppr h1 {
     margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 576px) {
-.lit {
-    display: flex;
-    align-items: center;
-    margin: 2rem 0;
-    text-align: left;
-}
+    .lit {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+        text-align: left;
+    }
 
-.lit div {
-    width: 100%;
-    margin: 0 2rem;
-}
+    .lit div {
+        width: 100%;
+        margin: 0 2rem;
+    }
 
-.btn-add {
-    margin-bottom: 6rem;
-}
+    .btn-add {
+        margin-bottom: 6rem;
+    }
 
-/* pages modifier et ajouter */
-.formulaire form {
-    display: flex;
-}
+    /* pages modifier et ajouter */
+    .formulaire form {
+        display: flex;
+    }
 
-.formulaire form div {
-    justify-content: center;
-    width: 100%;
-}
+    .formulaire form div {
+        justify-content: center;
+        width: 100%;
+    }
 }
