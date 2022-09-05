@@ -39,7 +39,7 @@ if (!empty($_POST)) {
 include("templates/header.php");
 ?>
 
-<div class="container">
+<div class="container formulaire">
 <form action="" method="post">
         <div>
             <label for="inputMarque">numéro de la marque</label>

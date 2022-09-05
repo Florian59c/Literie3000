@@ -35,7 +35,7 @@ if (!empty($_POST)) {
 }
 ?>
 
-<div class="container">
+<div class="container formulaire">
     <form action="" method="post">
         <div>
             <label for="inputMarque">numéro de la marque</label>

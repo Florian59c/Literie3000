@@ -70,6 +70,14 @@ h3, label {
     cursor: pointer;
 }
 
+input {
+    border: 0.3rem solid #FFCD4C;
+    width: 100%;
+}
+
+.formulaire div {
+    margin: 1rem 0;
+}
 
 
 /* page de suppression */
@@ -95,5 +103,15 @@ h3, label {
 
 .btn-add {
     margin-bottom: 6rem;
+}
+
+/* pages modifier et ajouter */
+.formulaire form {
+    display: flex;
+}
+
+.formulaire form div {
+    justify-content: center;
+    width: 100%;
 }
 }
