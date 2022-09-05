@@ -1,15 +1,41 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+$dsn = "mysql:host=localhost;dbname=literie3000;charset=UTF8";
+$db = new PDO($dsn, "root", "");
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Literie 3000</title>
-</head>
+$query = $db->query('SELECT lit.*, marque.nom_marque, dimension.taille
+FROM lit
+INNER JOIN marque
+ON lit.id_marque = marque.id
+INNER JOIN dimension
+ON lit.id_taille = dimension.id
+GROUP BY lit.id
+');
+$lits = $query->fetchAll(PDO::FETCH_ASSOC);
 
-<body>
-    <h1>salut</h1>
-</body>
+include("templates/header.php");
+include("templates/boutons.php");
 
-</html>
+?>
+<div class="container">
+    <?php
+    foreach ($lits as $lit) {
+    ?>
+        <div>
+            <img src="<?= $lit["image"] ?>" alt="<?= $lit["nom"] ?>">
+        </div>
+        <div>
+            <h1><?= $lit["nom"] ?></h1>
+            <h2><?= $lit["nom_marque"] ?></h2>
+            <h3><?= $lit["taille"] ?></h3>
+        </div>
+        <div>
+            <h3><?= $lit["prix"] ?></h3>
+            <h3><?= $lit["prix_reduit"] ?></h3>
+        </div>
+<?php
+    }
+?>
+</div>
+<?php
+include("templates/footer.php");
+?>
