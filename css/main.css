@@ -1,0 +1,20 @@
+* {
+    /* faire en sorte que la bordure et le padding soient calculés a l interieur du conteneur -> on change le mode de calcul du conteneur */
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Taille par defaut pour eviter d'avoir une taille predfini a 10 px */
+body {
+    font-size: 1.6rem;
+    /* enlever les marge par defaut du navigateur */
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
